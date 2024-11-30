@@ -249,25 +249,25 @@ main {
 }
 
 /* Стили для страницы регистрации */
-.register-section {
+.form-section {
     padding: 50px;
     text-align: center;
 }
 
-.register-form {
+.form-style {
     display: flex;
     flex-direction: column;
     max-width: 400px;
     margin: 0 auto;
 }
 
-.register-form label {
+.form-style label {
     margin-bottom: 10px;
     text-align: left;
     color: #fff;
 }
 
-.register-form input {
+.form-style input {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #800080; /* Темно-фиолетовая рамка */
@@ -277,7 +277,19 @@ main {
     border-radius: 0; /* Убираем закругления */
 }
 
-.register-form button {
+
+.form-style select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #800080; /* Темно-фиолетовая рамка */
+    background-color: #111;
+    color: #fff;
+    outline: none;
+    border-radius: 0; /* Убираем закругления */
+}
+
+
+.form-style button {
     padding: 10px;
     background-color: #800080; /* Темно-фиолетовая кнопка */
     color: #fff;
@@ -296,7 +308,8 @@ input {
     box-sizing: border-box;
 }
 
-/* Для ошибок: если ошибка присутствует, выделяем поле */
+
+
 input.invalid {
     border-color: red;
 }
@@ -329,3 +342,51 @@ button[type="submit"] {
 label{
     margin-top: 15px;
 }
+
+
+.checkbox-group {
+    display: flex;
+    align-items: last baseline;
+    justify-content: flex-start; /* Чекбокс будет слева, текст справа */
+    color: #fff; /* Цвет текста */
+    width: 100%;
+}
+
+.checkbox-group input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #800080; /* Фиолетовая рамка */
+    cursor: pointer;
+    margin-right: 10px; /* Отступ между чекбоксом и текстом */
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+}
+
+.checkbox-group input[type="checkbox"]:checked::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #800080; /* Фиолетовый цвет для отметки внутри чекбокса */
+    top: 0px;
+    left: 0px;
+}
+
+.horse{
+    .hero {
+        position: relative;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        background-image: url('images/horse.gif');
+        background-repeat:repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 50px;
+        z-index: 1; /* Обеспечивает, что контент в секции hero находится выше фонового изображения */
+    }
+}
+

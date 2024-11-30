@@ -33,16 +33,15 @@ document.getElementById("registerForm").addEventListener("submit", function(even
         isValid = false;
     }
 
-    // Если всё корректно, показываем уведомление и отправляем форму
     if (isValid) {
-        alert("Registration successful!");
-        document.getElementById("registerForm").reset();
+        alert(`Успешная регистрация!\n\nВаши данные:\nЛогин: ${username}\nEmail: ${email}\nПароль: ${password}`);
+        window.location.href = "index.html"; // Переход на домашнюю страницу
     }
 });
 
 function resetErrors() {
     const errorMessages = document.querySelectorAll('.error-message');
-    errorMessages.forEach((errorMessage) => errorMessage.remove());
+    errorMessages.forEach((errorMessage) => errorMessage.textContent = "");
     const inputs = document.querySelectorAll('.invalid');
     inputs.forEach((input) => input.classList.remove('invalid'));
 }
