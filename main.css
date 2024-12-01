@@ -10,7 +10,6 @@ body {
     color: #fff;
 }
 
-/* Секция навигации */
 header {
     display: flex;
     justify-content: space-between;
@@ -52,7 +51,7 @@ nav {
 
 .auth-buttons button {
     padding: 10px 15px;
-    background-color: #800080; /* Dark purple */
+    background-color: #800080;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -77,10 +76,8 @@ nav {
     background-size: cover;
     background-position: center;
     padding: 50px;
-    z-index: 1; /* Обеспечивает, что контент в секции hero находится выше фонового изображения */
+
 }
-
-
 
 
 .hero-content {
@@ -91,17 +88,17 @@ nav {
 .hero h1 {
     font-size: 8rem;
     margin-bottom: 20px;
-    animation-delay: 0.5s; /* Задержка анимации */
+    animation-delay: 0.5s; 
 }
 
 .hero p {
     font-size: 1.5rem;
-    animation-delay: 1s; /* Задержка анимации для текста */
+    animation-delay: 1s; 
 }
 
 .hero h2 {
     font-size: 1.5rem;
-    color: #800080; /* Dark purple */
+    color: #800080; 
 }
 
 .flavors {
@@ -116,7 +113,6 @@ nav {
     color: #fff;
 }
 
-/* Flexbox для карточек вкусов */
 .flavor-grid {
     display: flex;
     flex-wrap: wrap;
@@ -145,7 +141,7 @@ nav {
     transform: scale(1.05);
 }
 
-/* Секция "Для кого наши напитки?" */
+
 #target-groups {
     background-color: #000;
     padding: 50px;
@@ -155,7 +151,7 @@ nav {
 .section-title {
     text-align: center;
     font-size: 3rem;
-    color: #6a0dad; /* Темно-фиолетовый цвет заголовка */
+    color: #800080;
     margin-bottom: 40px;
 }
 
@@ -191,14 +187,10 @@ nav {
     line-height: 1.6;
 }
 
-/* Анимация плавного появления */
-.animate__animated {
-    opacity: 0; /* По умолчанию элементы скрыты */
-}
 
 .animate__fadeInLeft {
     animation-duration: 1.5s;
-    animation-fill-mode: forwards; /* Элемент остается видимым после анимации */
+    animation-fill-mode: forwards; 
 }
 
 .animate__fadeInRight {
@@ -206,9 +198,9 @@ nav {
     animation-fill-mode: forwards;
 }
 
-/* Стили для футера */
+
 footer {
-    background-color: #0c0c0c; /* Тёмно-серый цвет */
+    background-color: #0c0c0c;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -232,9 +224,7 @@ footer h4 {
     color: #800080;
 }
 
-/* Страница регистрации */
 
-/* Фиксирование футера внизу страницы */
 html, body {
     height: 100%;
 }
@@ -248,7 +238,7 @@ main {
     flex: 1;
 }
 
-/* Стили для страницы регистрации */
+
 .form-section {
     padding: 50px;
     text-align: center;
@@ -270,32 +260,32 @@ main {
 .form-style input {
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #800080; /* Темно-фиолетовая рамка */
+    border: 1px solid #800080; 
     background-color: #111;
     color: #fff;
     outline: none;
-    border-radius: 0; /* Убираем закругления */
+    border-radius: 0; 
 }
 
 
 .form-style select {
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #800080; /* Темно-фиолетовая рамка */
+    border: 1px solid #800080;
     background-color: #111;
     color: #fff;
     outline: none;
-    border-radius: 0; /* Убираем закругления */
+    border-radius: 0; 
 }
 
 
 .form-style button {
     padding: 10px;
-    background-color: #800080; /* Темно-фиолетовая кнопка */
+    background-color: #800080; 
     color: #fff;
     border: none;
     cursor: pointer;
-    border-radius: 0; /* Убираем закругления */
+    border-radius: 0; 
     font-size: 1rem;
 }
 
@@ -326,10 +316,10 @@ button[type="submit"] {
 .form-group {
     margin-bottom: 20px;
 }
-/* Стиль для сообщения об ошибке */
+
 .error-message {
     color: red;
-    font-size: 0.875em;
+    font-size: 12px;
     margin-top: 5px;
 }
 
@@ -347,8 +337,8 @@ label{
 .checkbox-group {
     display: flex;
     align-items: last baseline;
-    justify-content: flex-start; /* Чекбокс будет слева, текст справа */
-    color: #fff; /* Цвет текста */
+    justify-content: flex-start; 
+    color: #fff;
     width: 100%;
 }
 
@@ -356,37 +346,173 @@ label{
     appearance: none;
     width: 20px;
     height: 20px;
-    border: 2px solid #800080; /* Фиолетовая рамка */
+    border: 1px solid #800080;
     cursor: pointer;
-    margin-right: 10px; /* Отступ между чекбоксом и текстом */
+    margin-right: 10px;
     display: inline-block;
     position: relative;
     margin-left: 0px;
 }
 
 .checkbox-group input[type="checkbox"]:checked::before {
-    content: "";
+    content: "✓";
+    text-align: center;
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: #800080; /* Фиолетовый цвет для отметки внутри чекбокса */
+    background-color: #800080; 
     top: 0px;
     left: 0px;
 }
 
-.horse{
-    .hero {
-        position: relative;
-        height: 80vh;
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        background-image: url('images/horse.gif');
-        background-repeat:repeat;
-        background-size: cover;
-        background-position: center;
-        padding: 50px;
-        z-index: 1; /* Обеспечивает, что контент в секции hero находится выше фонового изображения */
+.horse {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-image: url('images/horse.gif');
+    background-size: cover;
+
+
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .flavor-card {
+        width: 45%;
+    }
+
+    .group {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .group-image {
+        margin-bottom: 20px;
     }
 }
 
+
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .flavor-card {
+        width: 100%;
+    }
+
+    .flavor-grid {
+        flex-direction: column;
+    }
+
+    .group {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .group-image {
+        margin-bottom: 20px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .group-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .group-text p {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 0;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 5px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .flavors h2 {
+        font-size: 2rem;
+    }
+
+    .flavor-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .flavor-card img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .group-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .group-text p {
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .group-image {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .group-text {
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}

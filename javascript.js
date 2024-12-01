@@ -1,9 +1,9 @@
 document.getElementById("signIn").addEventListener("click", function() {
-    alert("Sign In functionality is under development!");
+    alert("Функция входа на сайт ещё в разработке");
 });
 
 
-// Функция для добавления анимации при скролле
+
 function handleScrollAnimation() {
     const animatedItems = document.querySelectorAll('.group-image, .group-text');
     
@@ -22,21 +22,3 @@ function handleScrollAnimation() {
 }
 
 window.addEventListener('scroll', handleScrollAnimation);
-
-
-document.getElementById("registerForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Останавливаем стандартное поведение формы
-
-    const username = document.getElementById("username").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    // Простая валидация
-    if (username === "" || email === "" || password === "") {
-        alert("Пожалуйста, заполните все поля");
-        return;
-    }
-
-    alert("Регистрация прошла успешно!");
-});
-

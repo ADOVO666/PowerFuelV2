@@ -1,15 +1,14 @@
 document.getElementById("registerForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Отменяем стандартное поведение формы
+    event.preventDefault(); 
     
-    let isValid = true; // Флаг корректности
+    let isValid = true; 
     const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    // Очищаем предыдущие ошибки
+
     resetErrors();
 
-    // Валидация логина
     const usernameRegex = /^[a-zA-Z]{3,16}$/;
     if (!username || !usernameRegex.test(username)) {
         showError("usernameError", "Логин должен содержать только латинские буквы и быть длиной от 3 до 16 символов.");
@@ -17,7 +16,7 @@ document.getElementById("registerForm").addEventListener("submit", function(even
         isValid = false;
     }
 
-    // Валидация email
+
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!email || !emailRegex.test(email)) {
         showError("emailError", "Введите корректный адрес электронной почты.");
@@ -25,7 +24,7 @@ document.getElementById("registerForm").addEventListener("submit", function(even
         isValid = false;
     }
 
-    // Валидация пароля
+
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,32}$/;
     if (!password || !passwordRegex.test(password)) {
         showError("passwordError", "Пароль должен содержать хотя бы одну заглавную букву, одну маленькую букву, одну цифру и один специальный символ. Длина от 8 до 32 символов.");
@@ -35,7 +34,48 @@ document.getElementById("registerForm").addEventListener("submit", function(even
 
     if (isValid) {
         alert(`Успешная регистрация!\n\nВаши данные:\nЛогин: ${username}\nEmail: ${email}\nПароль: ${password}`);
-        window.location.href = "index.html"; // Переход на домашнюю страницу
+        window.location.href = "index.html"; 
+    }
+});
+
+
+
+
+
+
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    let isValid = true;
+    const orderEmail = document.getElementById("orderEmail").value;
+    const orderAddress = document.getElementById("orderAddress").value;
+    const orderFlavor = document.getElementById("orderFlavor").value;
+
+    resetErrors();
+
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!orderEmail || !emailRegex.test(orderEmail)) {
+        showError("orderEmailError", "Введите корректный адрес электронной почты.");
+        document.getElementById("orderEmail").classList.add("invalid");
+        isValid = false;
+    }
+
+
+    if (!orderAddress || orderAddress.length < 10) {
+        showError("orderAddressError", "Введите корректный адрес (минимум 10 символов).");
+        document.getElementById("orderAddress").classList.add("invalid");
+        isValid = false;
+    }
+
+    if (!orderFlavor) {
+        showError("orderFlavorError", "Пожалуйста, выберите вкус.");
+        document.getElementById("orderFlavor").classList.add("invalid");
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert("Ваш заказ успешно оформлен!");
+        window.location.href = "index.html";
     }
 });
 

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Заказать на дом - PowerFuel</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <header>
@@ -22,19 +21,17 @@
     <main>
         <section class="form-section">
             <h2>Оформление заказа</h2>
-            <form class="form-style" id="orderForm">
+            <form class="form-style" id="orderForm" novalidate>
+                <label for="orderEmail">Почта</label>
+                <input type="email" id="orderEmail" name="orderEmail" required>
+                <div id="orderEmailError"></div>
             
-                <label for="email">Почта</label>
-                <input type="email" id="email" name="email" required>
-                <div id="emailError"></div>
-            
-            
-                <label for="address">Адрес (Г. Город Ул. Улица Д. Дом, Кв. Квартира)</label>
-                <input type="text" id="address" name="address" required>
-                <div id="addressError"></div>
+                <label for="orderAddress">Адрес (Г. Город Ул. Улица Д. Дом, Кв. Квартира)</label>
+                <input type="text" id="orderAddress" name="orderAddress" required>
+                <div id="orderAddressError"></div>
         
-                <label for="flavor">Выбор вкуса</label>
-                <select id="flavor" name="flavor" required>
+                <label for="orderFlavor">Выбор вкуса</label>
+                <select id="orderFlavor" name="orderFlavor" required>
                     <option value="">Выберите вкус</option>
                     <option value="blackberry">Ежевика (12 шт. 1200 руб.)</option>
                     <option value="pineapple">Ананас (12 шт. 1500 руб.)</option>
@@ -43,14 +40,14 @@
                     <option value="strawberry">Клубника (12 шт. 1200 руб.)</option>
                     <option value="kiwi">Киви (12 шт. 1200 руб.)</option>
                 </select>
-                <div id="flavorError"></div>
+                <div id="orderFlavorError"></div>
             
                 <div class="checkbox-group">
                     <input type="checkbox" id="subscribe" name="subscribe">
                     <label for="subscribe">Подписаться на рассылку новостей компании</label>
                 </div>
             
-                <button type="submit">Заказать</button>
+                <button type="submit">Оплатить</button>
             </form>
         </section>
     </main>
@@ -58,7 +55,7 @@
     <footer>
         <p>© 2024 PowerFuel Energy Drink</p>
     </footer>
+    <script src="validation.js"></script>
 
-    <script src="javascript.js"></script>
 </body>
 </html>
